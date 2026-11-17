@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vibe Coding 101 — 4 堂課入門簡報｜Cursor × HTML/CSS/JS</title>
+  <meta name="description" content="專為零基礎中學生設計的 4 堂 Vibe Coding 入門課程簡報，使用 Cursor 與 HTML/CSS/JS 做出第一個網頁小遊戲。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div id="app" class="shell">
+    <header class="rail" aria-label="課程單元導覽">
+      <button type="button" class="brand" id="btn-home" title="回到封面總覽">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>VIBE CODING 101</span>
+      </button>
+      <nav class="lesson-tabs" id="lesson-tabs" aria-label="四堂課切換"></nav>
+    </header>
+
+    <main class="stage" id="stage" tabindex="-1">
+      <aside class="placard" id="placard" aria-label="本堂課次與時間配比"></aside>
+      <section class="reading-column" id="reading-column" aria-live="polite"></section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-controls">
+        <button type="button" class="nav-btn" id="btn-prev" aria-label="上一頁">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+          <span>上一頁</span>
+        </button>
+        <button type="button" class="nav-btn" id="btn-next" aria-label="下一頁">
+          <span>下一頁</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <button type="button" class="nav-btn" id="btn-overview" aria-expanded="false" aria-controls="overview-panel">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+          <span>課程總覽<span class="desktop-only"> (G)</span></span>
+        </button>
+        <button type="button" class="nav-btn desktop-only" id="btn-fullscreen" aria-label="切換全螢幕投影">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+          <span>全螢幕 (F)</span>
+        </button>
+      </div>
+      <div class="footer-meta">
+        <span class="kbd-hint desktop-only">← / → 翻頁 · 空白鍵下一頁 · 1–4 跳轉課次</span>
+        <span class="slide-counter" id="slide-counter">SLIDE 01 / 17</span>
+      </div>
+    </footer>
+
+    <div class="overview-backdrop" id="overview-panel" hidden role="dialog" aria-modal="true" aria-label="四堂課投影片總覽">
+      <div class="overview-sheet">
+        <div class="overview-head">
+          <div class="overview-title-group">
+            <h2>Vibe Coding 入門課程總覽</h2>
+            <p>共 4 堂課 × 50 分鐘｜零基礎中學生｜Cursor + HTML/CSS/JS</p>
+          </div>
+          <button type="button" class="close-btn" id="btn-close-overview">
+            <span>關閉總覽 (ESC)</span>
+          </button>
+        </div>
+        <div class="overview-grid" id="overview-grid"></div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

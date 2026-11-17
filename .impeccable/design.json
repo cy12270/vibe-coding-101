@@ -1,0 +1,397 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-17T00:00:00.000Z",
+  "title": "Design System: Vibe Coding 101",
+  "seededFrom": {
+    "world": "swiss-typographic-museum-placard",
+    "label": "Swiss Typographic Museum Placard & Exhibition Wall Guide",
+    "seed": "d6ab5fa5ab33026e"
+  },
+  "extensions": {
+    "colorMeta": {
+      "signal-red": {
+        "role": "primary",
+        "displayName": "Signal Red",
+        "canonical": "#d92b2b",
+        "tonalRamp": [
+          "oklch(22% 0.08 26)",
+          "oklch(32% 0.13 26)",
+          "oklch(42% 0.17 26)",
+          "oklch(54% 0.21 26)",
+          "oklch(62% 0.19 26)",
+          "oklch(74% 0.14 26)",
+          "oklch(86% 0.08 26)",
+          "oklch(96% 0.02 26)"
+        ]
+      },
+      "signal-red-deep": {
+        "role": "primary",
+        "displayName": "Signal Red Deep",
+        "canonical": "#b91c1c",
+        "tonalRamp": [
+          "oklch(20% 0.08 26)",
+          "oklch(29% 0.13 26)",
+          "oklch(39% 0.17 26)",
+          "oklch(48% 0.19 26)",
+          "oklch(58% 0.17 26)",
+          "oklch(71% 0.13 26)",
+          "oklch(84% 0.07 26)",
+          "oklch(95% 0.02 26)"
+        ]
+      },
+      "signal-red-tint": {
+        "role": "primary",
+        "displayName": "Signal Red Tint",
+        "canonical": "#fef2f2",
+        "tonalRamp": [
+          "oklch(22% 0.06 25)",
+          "oklch(34% 0.09 25)",
+          "oklch(46% 0.12 25)",
+          "oklch(58% 0.11 25)",
+          "oklch(70% 0.08 25)",
+          "oklch(82% 0.05 25)",
+          "oklch(91% 0.03 25)",
+          "oklch(97% 0.015 25)"
+        ]
+      },
+      "cobalt-blue": {
+        "role": "secondary",
+        "displayName": "Cobalt Blue",
+        "canonical": "#1d4ed8",
+        "tonalRamp": [
+          "oklch(21% 0.09 263)",
+          "oklch(31% 0.14 263)",
+          "oklch(41% 0.18 263)",
+          "oklch(49% 0.21 263)",
+          "oklch(60% 0.18 263)",
+          "oklch(72% 0.13 263)",
+          "oklch(85% 0.07 263)",
+          "oklch(96% 0.02 263)"
+        ]
+      },
+      "cobalt-tint": {
+        "role": "secondary",
+        "displayName": "Cobalt Tint",
+        "canonical": "#eff6ff",
+        "tonalRamp": [
+          "oklch(21% 0.06 258)",
+          "oklch(33% 0.09 258)",
+          "oklch(45% 0.11 258)",
+          "oklch(58% 0.10 258)",
+          "oklch(70% 0.08 258)",
+          "oklch(82% 0.05 258)",
+          "oklch(91% 0.03 258)",
+          "oklch(97% 0.015 258)"
+        ]
+      },
+      "forest-green": {
+        "role": "tertiary",
+        "displayName": "Forest Green",
+        "canonical": "#15803d",
+        "tonalRamp": [
+          "oklch(20% 0.06 149)",
+          "oklch(30% 0.10 149)",
+          "oklch(40% 0.13 149)",
+          "oklch(52% 0.15 149)",
+          "oklch(62% 0.14 149)",
+          "oklch(74% 0.10 149)",
+          "oklch(86% 0.06 149)",
+          "oklch(96% 0.02 149)"
+        ]
+      },
+      "forest-green-tint": {
+        "role": "tertiary",
+        "displayName": "Forest Green Tint",
+        "canonical": "#f0fdf4",
+        "tonalRamp": [
+          "oklch(22% 0.05 149)",
+          "oklch(34% 0.07 149)",
+          "oklch(46% 0.09 149)",
+          "oklch(58% 0.08 149)",
+          "oklch(70% 0.06 149)",
+          "oklch(82% 0.04 149)",
+          "oklch(92% 0.025 149)",
+          "oklch(98% 0.015 149)"
+        ]
+      },
+      "gallery-white": {
+        "role": "neutral",
+        "displayName": "Gallery White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(18% 0 0)",
+          "oklch(29% 0 0)",
+          "oklch(42% 0 0)",
+          "oklch(55% 0 0)",
+          "oklch(68% 0 0)",
+          "oklch(80% 0 0)",
+          "oklch(92% 0 0)",
+          "oklch(100% 0 0)"
+        ]
+      },
+      "stone-paper": {
+        "role": "neutral",
+        "displayName": "Warm Stone Paper",
+        "canonical": "#f4f4f1",
+        "tonalRamp": [
+          "oklch(20% 0.005 100)",
+          "oklch(32% 0.006 100)",
+          "oklch(44% 0.007 100)",
+          "oklch(57% 0.007 100)",
+          "oklch(70% 0.006 100)",
+          "oklch(82% 0.006 100)",
+          "oklch(91% 0.005 100)",
+          "oklch(96% 0.005 100)"
+        ]
+      },
+      "carbon-ink": {
+        "role": "neutral",
+        "displayName": "Carbon Ink",
+        "canonical": "#141414",
+        "tonalRamp": [
+          "oklch(16% 0 0)",
+          "oklch(24% 0 0)",
+          "oklch(34% 0 0)",
+          "oklch(46% 0 0)",
+          "oklch(59% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "charcoal-slate": {
+        "role": "neutral",
+        "displayName": "Charcoal Slate",
+        "canonical": "#404040",
+        "tonalRamp": [
+          "oklch(18% 0 0)",
+          "oklch(28% 0 0)",
+          "oklch(37% 0 0)",
+          "oklch(48% 0 0)",
+          "oklch(60% 0 0)",
+          "oklch(73% 0 0)",
+          "oklch(85% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "graphite-ash": {
+        "role": "neutral",
+        "displayName": "Graphite Ash",
+        "canonical": "#525252",
+        "tonalRamp": [
+          "oklch(19% 0 0)",
+          "oklch(30% 0 0)",
+          "oklch(43% 0 0)",
+          "oklch(54% 0 0)",
+          "oklch(66% 0 0)",
+          "oklch(78% 0 0)",
+          "oklch(88% 0 0)",
+          "oklch(96% 0 0)"
+        ]
+      },
+      "stone-hairline": {
+        "role": "neutral",
+        "displayName": "Stone Hairline",
+        "canonical": "#d4d4ce",
+        "tonalRamp": [
+          "oklch(20% 0.006 105)",
+          "oklch(32% 0.007 105)",
+          "oklch(44% 0.008 105)",
+          "oklch(57% 0.008 105)",
+          "oklch(70% 0.007 105)",
+          "oklch(81% 0.007 105)",
+          "oklch(87% 0.006 105)",
+          "oklch(95% 0.004 105)"
+        ]
+      },
+      "signal-coral": {
+        "role": "primary",
+        "displayName": "Signal Coral",
+        "canonical": "#fca5a5",
+        "tonalRamp": [
+          "oklch(24% 0.08 21)",
+          "oklch(36% 0.12 21)",
+          "oklch(48% 0.14 21)",
+          "oklch(60% 0.14 21)",
+          "oklch(71% 0.13 21)",
+          "oklch(80% 0.10 21)",
+          "oklch(89% 0.06 21)",
+          "oklch(96% 0.02 21)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Placard Numeral Display",
+        "purpose": "Oversized tabular lesson numerals (00–04) in the left museum placard; scales down to 40px below 1080px."
+      },
+      "headline": {
+        "displayName": "Slide Headline",
+        "purpose": "Single primary H1 slide title in the right reading column, balanced at max 24ch for classroom projection."
+      },
+      "title": {
+        "displayName": "Unit & Card Title",
+        "purpose": "Placard unit titles (24px), overview header (22px), concept card headings (19px), and step titles (17px)."
+      },
+      "body": {
+        "displayName": "Instructional Body",
+        "purpose": "Standard instructional text across placard descriptions, cards, notes, and tables (pairs with .lead at 1.05–1.22rem)."
+      },
+      "label": {
+        "displayName": "Monospace Tag & Meta",
+        "purpose": "Unit tags, capsule concept pills, prompt/note labels, timeline stamps, and overview slide metadata."
+      },
+      "code": {
+        "displayName": "Cursor Prompt & Code",
+        "purpose": "Copyable Cursor AI prompts inside dark prompt bars and inline HTML/shortcut tokens."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "duration-fast",
+        "value": "120ms",
+        "purpose": "Hover inversion on footer navigation buttons and overview drawer cards."
+      },
+      {
+        "name": "duration-base",
+        "value": "140ms",
+        "purpose": "State transitions on top rail lesson tabs, brand button, copy CTA, and cover arc entries."
+      },
+      {
+        "name": "ease-standard",
+        "value": "ease",
+        "purpose": "Default CSS easing across color and background-color transitions."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "0.01ms",
+        "purpose": "Collapses transition and animation durations under @media (prefers-reduced-motion: reduce)."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "tablet",
+        "value": "1080px"
+      },
+      {
+        "name": "mobile",
+        "value": "560px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Lesson Rail Tab",
+      "kind": "nav",
+      "refersTo": "lesson-tab",
+      "description": "Top 4-lesson track cell showing default, completed, hover, and Signal Red active states.",
+      "html": "<div class=\"ds-lesson-tabs\"><button type=\"button\" class=\"ds-lesson-tab done\"><span class=\"ds-tab-num\">01</span><span class=\"ds-tab-title\">認識 Cursor 與遊戲點子</span></button><button type=\"button\" class=\"ds-lesson-tab active\" aria-current=\"step\"><span class=\"ds-tab-num\">02</span><span class=\"ds-tab-title\">HTML 骨架＋CSS 外觀</span></button></div>",
+      "css": ".ds-lesson-tabs { display: grid; grid-template-columns: repeat(2, 1fr); background: var(--bg-placard, #f4f4f1); border: 2px solid var(--line, #141414); font-family: var(--font-sans, \"Noto Sans TC\", sans-serif); } .ds-lesson-tab { display: flex; align-items: center; gap: 10px; padding: 14px 18px; border: none; border-right: 1px solid var(--line-soft, #d4d4ce); background: transparent; color: var(--ink-subtle, #525252); font-size: 14px; font-weight: 700; text-align: left; cursor: pointer; transition: background-color 140ms ease, color 140ms ease; } .ds-lesson-tab:last-child { border-right: none; } .ds-lesson-tab.done { color: var(--ink, #141414); } .ds-lesson-tab:hover:not(.active) { background: #e9e9e3; color: var(--ink, #141414); } .ds-lesson-tab.active { background: var(--red, #d92b2b); color: #ffffff; } .ds-lesson-tab:focus-visible { outline: 3px solid var(--red, #d92b2b); outline-offset: 2px; } .ds-tab-num { font-family: var(--font-mono, \"JetBrains Mono\", monospace); font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; opacity: 0.9; }"
+    },
+    {
+      "name": "Primary Copy CTA Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Sharp Signal Red action button used inside dark Cursor Prompt bars and the playable cover demo.",
+      "html": "<button type=\"button\" class=\"ds-copy-btn\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"square\" aria-hidden=\"true\"><rect x=\"9\" y=\"9\" width=\"13\" height=\"13\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><span>複製指令給 Cursor</span></button>",
+      "css": ".ds-copy-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--red, #d92b2b); color: #ffffff; border: none; border-radius: 0; font-family: var(--font-sans, \"Noto Sans TC\", sans-serif); font-weight: 700; font-size: 14px; padding: 11px 18px; white-space: nowrap; cursor: pointer; transition: background-color 140ms ease; } .ds-copy-btn:hover { background: var(--red-dark, #b91c1c); } .ds-copy-btn:focus-visible { outline: 3px solid var(--red, #d92b2b); outline-offset: 2px; }"
+    },
+    {
+      "name": "Footer Navigation Button",
+      "kind": "button",
+      "refersTo": "button-nav",
+      "description": "Bordered gallery-white control button for slide stepping, overview drawer, and fullscreen projection.",
+      "html": "<button type=\"button\" class=\"ds-nav-btn\"><span>下一頁</span><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"square\" aria-hidden=\"true\"><path d=\"M9 18l6-6-6-6\"/></svg></button>",
+      "css": ".ds-nav-btn { display: inline-flex; align-items: center; gap: 6px; padding: 7px 12px; border: 1.5px solid var(--line, #141414); border-radius: 0; background: #ffffff; color: var(--ink, #141414); font-family: var(--font-sans, \"Noto Sans TC\", sans-serif); font-size: 13.5px; font-weight: 700; white-space: nowrap; cursor: pointer; transition: background-color 120ms ease, color 120ms ease; } .ds-nav-btn:hover:not(:disabled) { background: var(--ink, #141414); color: #ffffff; } .ds-nav-btn:focus-visible { outline: 3px solid var(--red, #d92b2b); outline-offset: 2px; }"
+    },
+    {
+      "name": "Concept Card & Capsule Pill",
+      "kind": "card",
+      "refersTo": "card-concept",
+      "description": "Sharp 2px-bordered reading card topped by a rounded capsule pill distinguishing HTML, CSS, and JS layers.",
+      "html": "<div class=\"ds-cell-box\"><span class=\"ds-pill blue\">CSS 外觀</span><h3>長得漂不漂亮</h3><p>夜空背景、按鈕樣式、字體大小與置中排版，全都交給 CSS 負責穿搭。</p></div>",
+      "css": ".ds-cell-box { border: 2px solid var(--line, #141414); border-radius: 0; padding: 16px 20px; background: var(--bg-page, #ffffff); color: var(--ink, #141414); font-family: var(--font-sans, \"Noto Sans TC\", sans-serif); display: flex; flex-direction: column; gap: 6px; max-width: 340px; } .ds-pill { display: inline-flex; align-items: center; width: fit-content; font-family: var(--font-mono, \"JetBrains Mono\", monospace); font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 999px; color: #ffffff; letter-spacing: 0.03em; } .ds-pill.blue { background: var(--blue, #1d4ed8); } .ds-cell-box h3 { margin: 4px 0 0; font-size: 19px; font-weight: 900; line-height: 1.35; } .ds-cell-box p { margin: 0; font-size: 15px; line-height: 1.55; color: var(--ink-muted, #404040); }"
+    },
+    {
+      "name": "Cursor Prompt Bar",
+      "kind": "custom",
+      "refersTo": "prompt-bar",
+      "description": "High-contrast dark Carbon Ink prompt bar anchored at the bottom of slides with copyable Cursor instructions.",
+      "html": "<div class=\"ds-prompt-box\"><div class=\"ds-prompt-content\"><span class=\"ds-prompt-label\">PROMPT 任務卡 1.1 · 產生第一個遊戲舞台</span><div class=\"ds-prompt-text\">請建立單一檔案 index.html（內含 CSS 與 JS），做一個「接星星大作戰」遊戲首頁。</div></div><button type=\"button\" class=\"ds-prompt-copy\">複製指令給 Cursor</button></div>",
+      "css": ".ds-prompt-box { border: 2px solid var(--line, #141414); border-radius: 0; background: var(--bg-code, #141414); color: #ffffff; padding: 18px 22px; display: flex; justify-content: space-between; align-items: center; gap: 20px; } .ds-prompt-content { display: flex; flex-direction: column; gap: 6px; } .ds-prompt-label { font-family: var(--font-mono, \"JetBrains Mono\", monospace); font-size: 12px; font-weight: 700; color: #fca5a5; letter-spacing: 0.06em; } .ds-prompt-text { font-family: var(--font-mono, \"JetBrains Mono\", monospace); font-size: 14.5px; line-height: 1.55; color: var(--bg-placard, #f4f4f1); } .ds-prompt-copy { background: var(--red, #d92b2b); color: #ffffff; border: none; border-radius: 0; font-family: var(--font-sans, \"Noto Sans TC\", sans-serif); font-weight: 700; font-size: 14px; padding: 11px 18px; white-space: nowrap; cursor: pointer; transition: background-color 140ms ease; } .ds-prompt-copy:hover { background: var(--red-dark, #b91c1c); }"
+    },
+    {
+      "name": "Classroom Note Bar",
+      "kind": "custom",
+      "refersTo": "note-bar",
+      "description": "Warm Stone Paper instructional callout bar used when a slide presents a live checkpoint rather than a prompt.",
+      "html": "<div class=\"ds-note-box\"><svg class=\"ds-note-icon\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"square\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><line x1=\"12\" y1=\"8\" x2=\"12\" y2=\"8.01\"/><line x1=\"12\" y1=\"12\" x2=\"12\" y2=\"16\"/></svg><div class=\"ds-note-content\"><span class=\"ds-note-label\">除錯黃金口訣</span><div class=\"ds-note-text\">做對一步就試玩 → 改壞馬上按 Restore Checkpoint → 有報錯先按 F12 看 Console 紅字。</div></div></div>",
+      "css": ".ds-note-box { border: 2px solid var(--line, #141414); border-radius: 0; background: var(--bg-placard, #f4f4f1); color: var(--ink, #141414); padding: 16px 22px; display: flex; align-items: flex-start; gap: 14px; font-family: var(--font-sans, \"Noto Sans TC\", sans-serif); } .ds-note-icon { color: var(--red, #d92b2b); flex-shrink: 0; margin-top: 2px; } .ds-note-content { display: flex; flex-direction: column; gap: 4px; } .ds-note-label { font-family: var(--font-mono, \"JetBrains Mono\", monospace); font-size: 12px; font-weight: 700; color: var(--red-dark, #b91c1c); letter-spacing: 0.04em; } .ds-note-text { font-size: 15px; line-height: 1.55; font-weight: 500; }"
+    },
+    {
+      "name": "Museum Lesson Placard",
+      "kind": "custom",
+      "refersTo": "card-concept",
+      "description": "Warm Stone Paper exhibition placard with tabular lesson numeral, title, and time-boxed lesson schedule.",
+      "html": "<aside class=\"ds-placard\"><div class=\"ds-placard-top\"><div class=\"ds-unit-tag\">LESSON 01 · 50 MIN</div><div class=\"ds-big-num\">01</div><h2 class=\"ds-placard-title\">不用背語法，<br>用自然語言做網頁</h2></div><div class=\"ds-timeline\"><div class=\"ds-timeline-row current\"><span class=\"ds-timeline-time\">00–10m</span><span>Vibe Coding 是什麼？</span></div><div class=\"ds-timeline-row\"><span class=\"ds-timeline-time\">10–25m</span><span>HTML / CSS / JS 分工圖解</span></div></div></aside>",
+      "css": ".ds-placard { width: 320px; background: var(--bg-placard, #f4f4f1); border: 2px solid var(--line, #141414); padding: 28px 24px; display: flex; flex-direction: column; gap: 20px; font-family: var(--font-sans, \"Noto Sans TC\", sans-serif); color: var(--ink, #141414); } .ds-unit-tag { display: inline-block; background: var(--red, #d92b2b); color: #ffffff; font-family: var(--font-mono, \"JetBrains Mono\", monospace); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; padding: 5px 11px; margin-bottom: 14px; font-variant-numeric: tabular-nums; } .ds-big-num { font-family: var(--font-mono, \"JetBrains Mono\", monospace); font-size: 84px; line-height: 0.88; font-weight: 700; letter-spacing: -0.05em; font-variant-numeric: tabular-nums; margin-bottom: 14px; } .ds-placard-title { margin: 0; font-size: 22px; font-weight: 900; line-height: 1.32; } .ds-timeline { border-top: 2px solid var(--line, #141414); padding-top: 14px; display: grid; gap: 8px; } .ds-timeline-row { display: grid; grid-template-columns: 72px 1fr; gap: 10px; font-size: 13.5px; line-height: 1.45; } .ds-timeline-row.current { font-weight: 700; color: var(--red-dark, #b91c1c); } .ds-timeline-time { font-family: var(--font-mono, \"JetBrains Mono\", monospace); font-size: 12.5px; font-variant-numeric: tabular-nums; color: var(--ink-subtle, #525252); } .ds-timeline-row.current .ds-timeline-time { color: var(--red-dark, #b91c1c); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Swiss Exhibition Wall Guide",
+    "overview": "This design system treats a 4-lesson introductory coding curriculum like a Swiss architectural museum placard and exhibition wall guide. Instead of dark-mode developer templates or dense syntax slides, it pairs a calm Warm Stone Paper structural frame with crisp Gallery White reading plates so instructors can project clearly to the back row of a classroom while students copy Cursor prompts from narrower screens.\n\nEvery slide sits inside a disciplined 2px Carbon Ink grid: a persistent 4-lesson track rail at the top, a numbered exhibition placard on the left tracking time-boxed lesson pacing, a focused single-concept reading column on the right, and a keyboard-first control bar at the bottom. High-contrast color is rationed for active orientation, semantic conceptual coding (HTML, CSS, JS), and primary actions.",
+    "keyCharacteristics": [
+      "Projection-scale legibility: Heavyweight Noto Sans TC headings (900) and oversized JetBrains Mono lesson numerals (00–04) engineered for classroom readability at distance.",
+      "Architectural linework over shadows: Zero drop shadows; spatial separation relies exclusively on 2px Carbon Ink (#141414) structural borders and tonal contrast between Warm Stone Paper (#f4f4f1) and Gallery White (#ffffff).",
+      "Rationed semantic color: Signal Red (#d92b2b) marks active navigation, primary actions, and JS/alert concepts, while Cobalt Blue (#1d4ed8) and Forest Green (#15803d) anchor CSS concepts and verified prompt outcomes.",
+      "Dual-audience utility: Fixed 100dvh stage on wide classroom displays (> 1080px) that reflows gracefully into a stacked, single-column reading scroll with a sticky footer on student laptops and mobile viewports (<= 1080px and <= 560px)."
+    ],
+    "rules": [
+      {
+        "name": "The Rationed Signal Rule",
+        "body": "Signal Red (#d92b2b) is reserved for the active lesson indicator, active step indices, primary copy/play buttons, and focus rings; never flood reading plates with red backgrounds outside the active overview card.",
+        "section": "colors"
+      },
+      {
+        "name": "The Pure Plate Rule",
+        "body": "Keep the right reading column on Gallery White (#ffffff) and confine structural chrome (rail, placard, footer) to Warm Stone Paper (#f4f4f1) so slide content always reads with maximum projector contrast.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tabular Numerals Rule",
+        "body": "Every lesson index, timeline stamp, step counter, score readout, and SLIDE XX / 17 indicator must set JetBrains Mono with font-variant-numeric: tabular-nums so numbers align vertically and never jitter when updating.",
+        "section": "typography"
+      },
+      {
+        "name": "The Balanced Headline Rule",
+        "body": "Slide <h1> headlines wrap with text-wrap: balance and cap at 24ch (with .lead capped at 68ch) to prevent awkward single-character orphans in Traditional Chinese projection.",
+        "section": "typography"
+      },
+      {
+        "name": "The Zero-Shadow Rule",
+        "body": "Never add drop shadows, ambient blurs, or floating glass panels; if a container needs separation, give it a 2px solid #141414 border or shift its surface between #ffffff and #f4f4f1.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Sharp-Frame, Pill-Tag Rule",
+        "body": "Keep all structural containers, buttons, and code bars strictly 0px corner radius; reserve 999px capsule geometry exclusively for .pill metadata tags.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do frame primary structural zones, cards, and prompt bars with sharp 0px corners and 2px solid #141414 borders.",
+      "Do pair Noto Sans TC (900 weight) headlines with JetBrains Mono (tabular-nums) for all lesson numerals, timers, counters, and Cursor prompts.",
+      "Do restrict Signal Red (#d92b2b) to active orientation markers, primary action buttons, and focus outlines so back-row contrast remains unmistakable.",
+      "Do support full keyboard slide navigation (ArrowLeft, ArrowRight, Space, 1–4, G, F, Escape) and preserve 3px solid #d92b2b :focus-visible outlines.",
+      "Do collapse the 100dvh desktop stage cleanly into a single-column vertical flow with a sticky bottom footer at <= 1080px."
+    ],
+    "donts": [
+      "Don't add box-shadow, blur filters, or glassmorphism to cards, buttons, or modal sheets; follow The Zero-Shadow Rule.",
+      "Don't place decorative eyebrow kickers above the primary slide <h1> in the reading column; lesson context belongs exclusively in the top rail and left placard.",
+      "Don't apply rounded corners (border-radius > 0) to cards, buttons, or tables; capsule rounding (999px) belongs strictly to .pill taxonomy tags.",
+      "Don't introduce dark backgrounds onto the main .reading-column reading plates; reserve #141414 surfaces for .brand, .prompt-box, active .layer-toggle, and the playable game canvas.",
+      "Don't replace inline square-cap SVGs with emoji glyphs or external icon-font packages."
+    ]
+  }
+}

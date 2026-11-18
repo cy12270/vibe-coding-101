@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #f4f4f1;
+  color: #141414;
+  font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  padding: 24px;
+}
+
+.board {
+  width: 100%;
+  max-width: 540px;
+  background: #ffffff;
+  border: 2px solid #141414;
+  padding: 28px;
+  display: grid;
+  gap: 20px;
+}
+
+/* Bug：切換深色模式時，背景變深黑 #141414，文字卻誤設成 #171717 導致整頁字幾乎隱形！ */
+body.dark-mode {
+  background: #0a0a0a;
+}
+
+body.dark-mode .board {
+  background: #141414;
+  color: #171717;
+  border-color: #404040;
+}
+
+body.dark-mode .panel {
+  background: #141414;
+  border-color: #262626;
+}
+
+body.dark-mode .candidates,
+body.dark-mode .winner-box {
+  color: #171717;
+  background: #181818;
+}
+
+.board-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  border-bottom: 2px solid #141414;
+  padding-bottom: 16px;
+}
+
+.tag {
+  display: inline-block;
+  background: #d92b2b;
+  color: #ffffff;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  margin-bottom: 8px;
+}
+
+h1 {
+  font-size: 26px;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 17px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.panel {
+  border: 2px solid #141414;
+  padding: 18px;
+  background: #fafaf8;
+}
+
+.counter-display {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 44px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  word-break: break-all;
+}
+
+.btn-row {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 16px;
+  border: 2px solid #141414;
+  cursor: pointer;
+}
+
+.primary-btn {
+  background: #d92b2b;
+  color: #ffffff;
+}
+
+.secondary-btn,
+.ghost-btn {
+  background: #ffffff;
+  color: #141414;
+}
+
+.full {
+  width: 100%;
+}
+
+.candidates {
+  font-size: 14px;
+  color: #525252;
+  margin-bottom: 12px;
+}
+
+.winner-box {
+  border: 1px dashed #141414;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 12px;
+  background: #ffffff;
+}

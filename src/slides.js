@@ -54,6 +54,20 @@ export const LESSONS = [
       { time: '28–40m', label: '延伸示範：GitHub Pages 上線', step: 2 },
       { time: '40–50m', label: '成果互玩＋延伸資源與參考網站', step: 3 }
     ]
+  },
+  {
+    id: 5,
+    num: 'EX',
+    shortTitle: '課堂實作練習',
+    unitTag: 'EXERCISE · 4 FOLDERS',
+    placardTitle: '動手練功坊：\n從手寫到 AI 除錯',
+    placardDesc: '第 1–2 題請不靠 AI 親手修改標籤與樣式；第 3–4 題先在瀏覽器觀察怪異現象，再用 Cursor AI 修復。',
+    timeline: [
+      { time: 'STEP 01', label: '下載練習包並解壓縮為資料夾', step: 0 },
+      { time: 'STEP 02', label: '雙擊 index.html 觀察目前畫面', step: 1 },
+      { time: 'STEP 03', label: 'Cursor 點選 Open Folder 開啟', step: 2 },
+      { time: 'STEP 04', label: '依 README 清單完成並重整檢查', step: 3 }
+    ]
   }
 ];
 
@@ -539,5 +553,64 @@ export const SLIDES = [
     ],
     noteLabel: '英文文件不怕卡關的小撇步',
     note: '打開 MDN 或 Cursor 文件時，可善用瀏覽器內建「翻譯成繁體中文」，或直接把看不懂的段落貼進 Cursor 問：「請用國中生聽得懂的方式解釋這段在寫什麼」。'
+  },
+
+  // EXERCISE PAGE
+  {
+    id: 'exercises',
+    lessonId: 5,
+    timelineStep: 0,
+    title: 'Exercise：課堂實作練習包（下載資料夾用 Cursor 開啟）',
+    lead: '點擊下方按鈕下載 .zip 解壓縮即為完整專案資料夾。前兩題請不開 AI 親手完成基礎語法；後兩題為行為詭異的故障網站，請練習用 Cursor AI 診斷修復！',
+    type: 'exercise-grid',
+    exercises: [
+      {
+        num: '01',
+        title: 'Basic HTML Syntax｜基礎 HTML 語法',
+        modePill: '免用 AI · 手動完成',
+        pillStyle: 'ink',
+        folder: 'exercise-01-basic-html/',
+        desc: '補上漏寫的 </h1> 結束標籤，並手動新增自我介紹 <p>、技能清單 <li> 與開始按鈕 <button>。',
+        zipUrl: './exercises/exercise-01-basic-html.zip',
+        previewUrl: './exercises/exercise-01-basic-html/index.html',
+        previewLabel: '預覽題目'
+      },
+      {
+        num: '02',
+        title: 'CSS Styling｜CSS 視覺排版改造',
+        modePill: '免用 AI · 手動完成',
+        pillStyle: 'blue',
+        folder: 'exercise-02-css-styling/',
+        desc: '不改 HTML，親手調整 4 個 CSS 屬性（文字對比色、padding 呼吸內距、標題字級與按鈕配色）救回海報。',
+        zipUrl: './exercises/exercise-02-css-styling.zip',
+        previewUrl: './exercises/exercise-02-css-styling/index.html',
+        previewLabel: '預覽題目'
+      },
+      {
+        num: '03',
+        title: 'Webpage with Bugs｜怪異故障網頁',
+        modePill: '使用 Cursor AI 除錯',
+        pillStyle: 'red',
+        folder: 'exercise-03-buggy-webpage/',
+        desc: '人數 +1 變成 1111、開深色模式整頁字隱形、抽籤抽到 undefined、歸零鈕失靈——觀察怪現象並請 AI 修復！',
+        zipUrl: './exercises/exercise-03-buggy-webpage.zip',
+        previewUrl: './exercises/exercise-03-buggy-webpage/index.html',
+        previewLabel: '體驗怪現象'
+      },
+      {
+        num: '04',
+        title: 'Game with Bugs｜失控故障小遊戲',
+        modePill: '使用 Cursor AI 除錯',
+        pillStyle: 'red',
+        folder: 'exercise-04-buggy-game/',
+        desc: '左右方向鍵完全顛倒又穿牆失蹤、接星星扣分撞炸彈加分、重玩變兩倍速暴走——用 Cursor AI 救回遊戲！',
+        zipUrl: './exercises/exercise-04-buggy-game.zip',
+        previewUrl: './exercises/exercise-04-buggy-game/index.html',
+        previewLabel: '試玩故障版'
+      }
+    ],
+    bundleLabel: 'ALL-IN-ONE BUNDLE · 一次下載全部 4 個練習資料夾',
+    bundleText: '解壓縮後內含 exercise-01 ～ exercise-04 四個獨立資料夾，在 Cursor 點選 File → Open Folder 選擇單一題目資料夾即可開始。',
+    bundleUrl: './exercises/vibe-coding-exercises-all.zip'
   }
 ];

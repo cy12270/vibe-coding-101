@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>練習 03：電玩社活動看板（故障網頁除錯）</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="board" id="board">
+    <header class="board-head">
+      <div>
+        <span class="tag">CLUB TOOLKIT · BUGGY</span>
+        <h1>電玩社試玩會報名板</h1>
+      </div>
+      <button type="button" class="ghost-btn" id="btn-theme">切換深色模式</button>
+    </header>
+
+    <section class="panel">
+      <h2>現場報名人數統計</h2>
+      <div class="counter-display" id="member-count">1</div>
+      <div class="btn-row">
+        <button type="button" class="primary-btn" id="btn-add">報名人數 +1</button>
+        <button type="button" class="secondary-btn" id="btn-reset">人數歸零</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>隨機抽出今日關主</h2>
+      <p class="candidates">候選名單：小宇、阿哲、小晴、品妍、子軒</p>
+      <div class="winner-box" id="winner-box">尚未抽籤</div>
+      <button type="button" class="primary-btn full" id="btn-draw">抽出今日值日生</button>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>

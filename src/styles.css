@@ -116,14 +116,14 @@ a:focus-visible,
 
 .lesson-tabs {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 .lesson-tab {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 0 18px;
+  gap: 8px;
+  padding: 0 14px;
   border-right: 1px solid var(--line-soft);
   font-size: 14px;
   font-weight: 700;
@@ -446,6 +446,7 @@ a:focus-visible,
   padding: 11px 18px;
   white-space: nowrap;
   flex-shrink: 0;
+  text-decoration: none;
   transition: background-color 140ms ease;
 }
 
@@ -792,6 +793,111 @@ a:focus-visible,
   font-size: 13px;
 }
 
+/* Exercise Grid (Slide 19) */
+.exercise-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.ex-card {
+  border: 2px solid var(--line);
+  background: var(--bg-page);
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.ex-card-top {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ex-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.ex-num {
+  font-family: var(--font-mono);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--red);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.ex-card h3 {
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.3;
+}
+
+.ex-card p {
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: var(--ink-muted);
+}
+
+.ex-card-foot {
+  border-top: 1px solid var(--line-soft);
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.ex-folder {
+  font-size: 12px;
+}
+
+.ex-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ex-preview-btn,
+.ex-dl-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 11px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 120ms ease, color 120ms ease;
+}
+
+.ex-preview-btn {
+  border: 1.5px solid var(--line);
+  background: var(--bg-placard);
+  color: var(--ink);
+}
+
+.ex-preview-btn:hover {
+  background: var(--ink);
+  color: #ffffff;
+}
+
+.ex-dl-btn {
+  border: 1.5px solid var(--line);
+  background: var(--red);
+  color: #ffffff;
+}
+
+.ex-dl-btn:hover {
+  background: var(--red-dark);
+}
+
 /* Step Matrix & Checklist */
 .step-grid {
   display: grid;
@@ -1085,7 +1191,8 @@ a:focus-visible,
   .triad,
   .two-col,
   .dissector,
-  .step-grid {
+  .step-grid,
+  .exercise-grid {
     grid-template-columns: 1fr;
   }
 

@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "pack-exercises": "cd public/exercises && zip -r -X -FS exercise-01-basic-html.zip exercise-01-basic-html && zip -r -X -FS exercise-02-css-styling.zip exercise-02-css-styling && zip -r -X -FS exercise-03-buggy-webpage.zip exercise-03-buggy-webpage && zip -r -X -FS exercise-04-buggy-game.zip exercise-04-buggy-game && zip -r -X -FS vibe-coding-exercises-all.zip exercise-01-basic-html exercise-02-css-styling exercise-03-buggy-webpage exercise-04-buggy-game",
     "build": "vite build",
     "preview": "vite preview"
   },

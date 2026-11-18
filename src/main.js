@@ -5,6 +5,7 @@ const ICON_COPY = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" s
 const ICON_CHECK = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>`;
 const ICON_NOTE = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="8.01"/><line x1="12" y1="12" x2="12" y2="16"/></svg>`;
 const ICON_EXT = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>`;
+const ICON_DOWNLOAD = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" aria-hidden="true"><path d="M12 4v12"/><path d="M7 11l5 5 5-5"/><path d="M4 20h16"/></svg>`;
 
 const state = {
   index: 0,
@@ -48,7 +49,12 @@ function stopGameLoop() {
 }
 
 function getIndexFromHash() {
-  const match = window.location.hash.match(/^#slide-(\d+)$/);
+  const hash = window.location.hash.toLowerCase();
+  if (hash === '#exercise' || hash === '#exercises') {
+    const exIdx = SLIDES.findIndex((s) => s.id === 'exercises');
+    if (exIdx !== -1) return exIdx;
+  }
+  const match = hash.match(/^#slide-(\d+)$/);
   if (!match) return 0;
   const num = Number.parseInt(match[1], 10);
   if (Number.isNaN(num) || num < 1 || num > SLIDES.length) return 0;
@@ -80,7 +86,7 @@ function jumpToLesson(lessonId) {
 function renderTopRail(currentLessonId) {
   elLessonTabs.innerHTML = LESSONS.map((lesson) => {
     const isActive = lesson.id === currentLessonId;
-    const isDone = currentLessonId > lesson.id;
+    const isDone = currentLessonId <= 4 && lesson.id <= 4 && currentLessonId > lesson.id;
     const cls = ['lesson-tab', isActive ? 'active' : '', isDone ? 'done' : '']
       .filter(Boolean)
       .join(' ');
@@ -139,6 +145,20 @@ function renderPromptBar(slide) {
           ${ICON_COPY}
           <span>複製指令給 Cursor</span>
         </button>
+      </div>
+    `;
+  }
+  if (slide.bundleUrl) {
+    return `
+      <div class="prompt-box">
+        <div class="prompt-content">
+          <span class="prompt-label">${escapeHtml(slide.bundleLabel || 'EXERCISE BUNDLE')}</span>
+          <div class="prompt-text">${escapeHtml(slide.bundleText || '')}</div>
+        </div>
+        <a class="copy-btn bundle-link" href="${escapeHtml(slide.bundleUrl)}" download>
+          ${ICON_DOWNLOAD}
+          <span>一次下載全部 4 題 (.zip)</span>
+        </a>
       </div>
     `;
   }
@@ -398,6 +418,42 @@ function renderBodyContent(slide) {
       `;
     }
 
+    case 'exercise-grid': {
+      return `
+        <div class="exercise-grid">
+          ${slide.exercises
+            .map(
+              (ex) => `
+            <article class="ex-card">
+              <div class="ex-card-top">
+                <div class="ex-meta-row">
+                  <span class="ex-num">${escapeHtml(ex.num)}</span>
+                  <span class="pill ${escapeHtml(ex.pillStyle)}">${escapeHtml(ex.modePill)}</span>
+                </div>
+                <h3>${escapeHtml(ex.title)}</h3>
+                <p>${escapeHtml(ex.desc)}</p>
+              </div>
+              <div class="ex-card-foot">
+                <span class="mono-code ex-folder">${escapeHtml(ex.folder)}</span>
+                <div class="ex-actions">
+                  <a class="ex-preview-btn" href="${escapeHtml(ex.previewUrl)}" target="_blank" rel="noopener noreferrer">
+                    <span>${escapeHtml(ex.previewLabel)}</span>
+                    ${ICON_EXT}
+                  </a>
+                  <a class="ex-dl-btn" href="${escapeHtml(ex.zipUrl)}" download>
+                    ${ICON_DOWNLOAD}
+                    <span>下載資料夾</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          `
+            )
+            .join('')}
+        </div>
+      `;
+    }
+
     default:
       return '';
   }
@@ -643,7 +699,7 @@ function initMiniGameDemo() {
 
 function renderOverviewGrid() {
   elOverviewGrid.innerHTML = SLIDES.map((s, idx) => {
-    const tag = s.lessonId === 0 ? 'COVER' : `LESSON ${pad2(s.lessonId)}`;
+    const tag = s.lessonId === 0 ? 'COVER' : s.lessonId === 5 ? 'EXERCISE' : `LESSON ${pad2(s.lessonId)}`;
     return `
       <button type="button" class="ov-card ${idx === state.index ? 'active' : ''}" data-ov-idx="${idx}">
         <span class="ov-meta">${tag} · SLIDE ${pad2(idx + 1)}</span>
@@ -738,9 +794,12 @@ document.addEventListener('keydown', (e) => {
   } else if ((e.key === 'f' || e.key === 'F') && !isFormControl) {
     e.preventDefault();
     elBtnFullscreen.click();
-  } else if (['1', '2', '3', '4'].includes(e.key) && !isFormControl) {
+  } else if (['1', '2', '3', '4', '5'].includes(e.key) && !isFormControl) {
     e.preventDefault();
     jumpToLesson(Number(e.key));
+  } else if ((e.key === 'e' || e.key === 'E') && !isFormControl) {
+    e.preventDefault();
+    jumpToLesson(5);
   } else if (e.key === '0' && !isFormControl) {
     e.preventDefault();
     goToSlide(0);

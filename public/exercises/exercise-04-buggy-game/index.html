@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>練習 04：接星星大作戰（故障遊戲除錯）</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="cabinet">
+    <header class="hud">
+      <div>
+        <span class="badge">BUGGY ARCADE · EX 04</span>
+        <h1>接星星大作戰（故障版）</h1>
+      </div>
+      <div class="readout">
+        <span>SCORE: <strong id="score">0</strong></span>
+        <span>TIME: <strong id="timer">20</strong>s</span>
+      </div>
+    </header>
+
+    <canvas id="game-canvas" width="560" height="340"></canvas>
+
+    <footer class="controls">
+      <p>使用鍵盤 <strong>← / →</strong> 移動白色平台，接住黃色星星、閃避紅色炸彈！</p>
+      <button type="button" id="btn-restart">開始 / 重新開始</button>
+    </footer>
+  </main>
+
+  <script src="./game.js"></script>
+</body>
+</html>

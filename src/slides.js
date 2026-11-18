@@ -52,7 +52,7 @@ export const LESSONS = [
       { time: '00–12m', label: '為什麼修 Bug 比寫程式更重要', step: 0 },
       { time: '12–28m', label: 'AI 翻車急救站：4 招秒救法', step: 1 },
       { time: '28–40m', label: '延伸示範：GitHub Pages 上線', step: 2 },
-      { time: '40–50m', label: '成果互玩＋課後點子庫', step: 3 }
+      { time: '40–50m', label: '成果互玩＋延伸資源與參考網站', step: 3 }
     ]
   }
 ];
@@ -115,7 +115,10 @@ export const SLIDES = [
       }
     ],
     noteLabel: '課前準備 · 建立本堂課工作資料夾',
-    note: '在桌面新增名為 my-star-game 的資料夾 → 打開 Cursor → 點選 Open Folder 選擇這個資料夾即可開始。'
+    note: '在桌面新增名為 my-star-game 的資料夾 → 打開 Cursor → 點選 Open Folder 選擇這個資料夾即可開始。',
+    refs: [
+      { label: 'Cursor 官方網站（下載編輯器）', host: 'cursor.com', url: 'https://cursor.com/' }
+    ]
   },
 
   {
@@ -175,7 +178,10 @@ export const SLIDES = [
       ]
     ],
     noteLabel: '本堂操作提醒 · 先存檔再重整瀏覽器',
-    note: 'AI 寫完程式碼後記得按 Accept（或 Cmd+S 存檔），再到瀏覽器按下重新整理（F5 / Cmd+R）才會看到最新版本。'
+    note: 'AI 寫完程式碼後記得按 Accept（或 Cmd+S 存檔），再到瀏覽器按下重新整理（F5 / Cmd+R）才會看到最新版本。',
+    refs: [
+      { label: 'Cursor 官方使用文件', host: 'cursor.com/docs', url: 'https://cursor.com/docs' }
+    ]
   },
 
   {
@@ -224,7 +230,10 @@ export const SLIDES = [
       ['<script> ... </script>', 'JavaScript 程式區', '放在網頁最下方，負責執行遊戲計分與按鍵監聽。']
     ],
     noteLabel: '課堂觀察任務 · 在 Cursor 打開你的 index.html',
-    note: '按 Cmd+F 搜尋 button 或 canvas，對照看看 AI 剛才幫你寫出來的 HTML 標籤位在檔案哪裡。'
+    note: '按 Cmd+F 搜尋 button 或 canvas，對照看看 AI 剛才幫你寫出來的 HTML 標籤位在檔案哪裡。',
+    refs: [
+      { label: 'MDN：HTML 基礎語法入門', host: 'developer.mozilla.org', url: 'https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax' }
+    ]
   },
 
   {
@@ -249,7 +258,11 @@ export const SLIDES = [
       }
     ],
     promptLabel: 'PROMPT 任務卡 2.1 · 用 CSS 調整排版呼吸感',
-    prompt: '請調整目前遊戲的 CSS：讓整個遊戲容器在畫面垂直水平置中，分數欄與畫布之間留出 16px 間距，按鈕加上 12px 24px 內距與俐落外框。'
+    prompt: '請調整目前遊戲的 CSS：讓整個遊戲容器在畫面垂直水平置中，分數欄與畫布之間留出 16px 間距，按鈕加上 12px 24px 內距與俐落外框。',
+    refs: [
+      { label: 'MDN：CSS 盒子模型圖解', host: 'developer.mozilla.org', url: 'https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model' },
+      { label: 'MDN：CSS 樣式基礎', host: 'developer.mozilla.org', url: 'https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics' }
+    ]
   },
 
   {
@@ -323,7 +336,11 @@ export const SLIDES = [
       }
     ],
     promptLabel: '讀懂 JS 小技巧 · 不用自己寫，但要能跟 AI 討論數值',
-    prompt: '想調整難度時可以直接打開 Cursor 問：「請把檔案裡控制星星掉落速度與玩家移動速度的變數整理在最上方並加上中文註解。」'
+    prompt: '想調整難度時可以直接打開 Cursor 問：「請把檔案裡控制星星掉落速度與玩家移動速度的變數整理在最上方並加上中文註解。」',
+    refs: [
+      { label: 'MDN：JavaScript 互動腳本入門', host: 'developer.mozilla.org', url: 'https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting' },
+      { label: 'MDN：Canvas 2D 繪圖 API', host: 'developer.mozilla.org', url: 'https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API' }
+    ]
   },
 
   {
@@ -442,7 +459,11 @@ export const SLIDES = [
       { num: '04', title: '取得專屬公開網址', desc: '等待約 1 分鐘重新整理頁面，就會看到 https://你的帳號.github.io/star-catcher-game/ 網址！' }
     ],
     noteLabel: '課堂說明 · 老師現場示範上線（學生可回家挑戰）',
-    note: '只要作品是純靜態的 HTML / CSS / JS（就像這份課程簡報網站一樣），都可以免費部署到 GitHub Pages 永久保存。'
+    note: '只要作品是純靜態的 HTML / CSS / JS（就像這份課程簡報網站一樣），都可以免費部署到 GitHub Pages 永久保存。',
+    refs: [
+      { label: 'GitHub Pages 官方指南', host: 'pages.github.com', url: 'https://pages.github.com/' },
+      { label: 'GitHub Pages 完整文件', host: 'docs.github.com/en/pages', url: 'https://docs.github.com/en/pages' }
+    ]
   },
 
   {
@@ -474,5 +495,49 @@ export const SLIDES = [
     ],
     promptLabel: '結業出發指令 · 下一個作品的第一句話',
     prompt: '請用單一 HTML 檔案幫我做一個「【填入你的點子】」，介面簡潔高對比、操作直覺，並在手機和電腦螢幕上都能完美顯示。'
+  },
+
+  {
+    id: 'l4-references',
+    lessonId: 4,
+    timelineStep: 3,
+    title: '課後自學補給站：官方參考網站總覽',
+    lead: '寫網頁不用死記硬背，連專業工程師每天都在查文件。這份清單整理了最可靠、無廣告且對新手最友善的官方資源。',
+    type: 'link-table',
+    headers: ['參考資源', '適合什麼時候查閱', '官方網址'],
+    links: [
+      {
+        name: 'Cursor 官方網站與文件',
+        desc: '下載安裝 Cursor 桌面版，查詢 Agent、Chat、Inline Edit 與 Checkpoint 操作說明。',
+        host: 'cursor.com / docs',
+        url: 'https://cursor.com/docs'
+      },
+      {
+        name: 'MDN：HTML 基礎語法',
+        desc: '認識網頁標籤結構（標題、按鈕、圖片與區塊容器）的最佳入門手冊。',
+        host: 'developer.mozilla.org/.../Basic_HTML_syntax',
+        url: 'https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax'
+      },
+      {
+        name: 'MDN：CSS 樣式與盒子模型',
+        desc: '查閱配色、字體排版、margin 外距與 padding 內距的圖解基礎教材。',
+        host: 'developer.mozilla.org/.../Styling_basics',
+        url: 'https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics'
+      },
+      {
+        name: 'MDN：JavaScript 與 Canvas',
+        desc: '想把小遊戲做得更進階時，可查詢事件偵測、計時器與 Canvas 2D 繪圖原理。',
+        host: 'developer.mozilla.org/.../Scripting',
+        url: 'https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting'
+      },
+      {
+        name: 'GitHub Pages 官方網站',
+        desc: '圖解步驟教你如何把靜態 HTML/CSS/JS 作品免費放上公開網址。',
+        host: 'pages.github.com',
+        url: 'https://pages.github.com/'
+      }
+    ],
+    noteLabel: '英文文件不怕卡關的小撇步',
+    note: '打開 MDN 或 Cursor 文件時，可善用瀏覽器內建「翻譯成繁體中文」，或直接把看不懂的段落貼進 Cursor 問：「請用國中生聽得懂的方式解釋這段在寫什麼」。'
   }
 ];

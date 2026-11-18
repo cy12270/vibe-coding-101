@@ -4,6 +4,7 @@ import { LESSONS, COVER_PLACARD, SLIDES } from './slides.js';
 const ICON_COPY = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><rect x="9" y="9" width="13" height="13"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>`;
 const ICON_CHECK = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>`;
 const ICON_NOTE = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="8.01"/><line x1="12" y1="12" x2="12" y2="16"/></svg>`;
+const ICON_EXT = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>`;
 
 const state = {
   index: 0,
@@ -369,9 +370,59 @@ function renderBodyContent(slide) {
       `;
     }
 
+    case 'link-table': {
+      return `
+        <table class="spec-table">
+          <thead>
+            <tr>${slide.headers.map((h) => `<th>${escapeHtml(h)}</th>`).join('')}</tr>
+          </thead>
+          <tbody>
+            ${slide.links
+              .map(
+                (item) => `
+              <tr>
+                <td><strong>${escapeHtml(item.name)}</strong></td>
+                <td>${escapeHtml(item.desc)}</td>
+                <td>
+                  <a class="ref-link" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">
+                    <span class="ref-link-host">${escapeHtml(item.host)}</span>
+                    ${ICON_EXT}
+                  </a>
+                </td>
+              </tr>
+            `
+              )
+              .join('')}
+          </tbody>
+        </table>
+      `;
+    }
+
     default:
       return '';
   }
+}
+
+function renderRefsStrip(slide) {
+  if (!slide.refs || slide.refs.length === 0) return '';
+  return `
+    <div class="ref-strip" aria-label="本頁參考網站">
+      <span class="ref-strip-label">參考網站</span>
+      <div class="ref-strip-items">
+        ${slide.refs
+          .map(
+            (r) => `
+          <a class="ref-link" href="${escapeHtml(r.url)}" target="_blank" rel="noopener noreferrer">
+            <span>${escapeHtml(r.label)}</span>
+            <span class="ref-link-host">${escapeHtml(r.host)}</span>
+            ${ICON_EXT}
+          </a>
+        `
+          )
+          .join('')}
+      </div>
+    </div>
+  `;
 }
 
 function bindSlideInteractions(slide) {
@@ -440,6 +491,7 @@ function renderReadingColumn(slide) {
       <h1>${escapeHtml(slide.title)}</h1>
       <p class="lead">${escapeHtml(slide.lead)}</p>
       ${renderBodyContent(slide)}
+      ${renderRefsStrip(slide)}
     </div>
     ${renderPromptBar(slide)}
   `;
